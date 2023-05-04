@@ -1,5 +1,7 @@
 package com.ohgiraffers.section02.looping_and_branching.level03.hard;
 
+import java.util.Scanner;
+
 public class Application3 {
 
 	public static void main(String[] args) {
@@ -30,7 +32,29 @@ public class Application3 {
 		 * -- 출력 예시 --
 		 * 영문자가 아닌 문자가 포함되어 있습니다.
 		 * */
-		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 입력 : ");
+		String str = sc.nextLine();
+		int sign = 0;
+		for(int i = 0; i<str.length(); i++){
+			if(!((str.charAt(i)>='a' && str.charAt(i)<='z') || (str.charAt(i)>='A' && str.charAt(i) <='Z'))){
+				sign = 1;
+			}
+		}
+		if(sign == 1){
+			System.out.println("영문자가 아닌 문자가 포함되어 있습니다.");
+		}else{
+			System.out.print("문자 입력 : ");
+			String s = sc.nextLine();
+			char c = s.charAt(0);
+			int count = 0;
+			for(int i = 0; i<str.length(); i++) {
+				if (str.charAt(i) == c) {
+					count++;
+				}
+			}
+			System.out.printf("포함된 갯수 : %d개", count);
+		}
 	}
 
 }
