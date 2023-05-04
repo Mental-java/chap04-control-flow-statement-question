@@ -9,7 +9,11 @@ public class Application1 {
 		 * -- 출력 예시 --
 		 * 1부터 10까지의 합 : 55
 		 * */
-		
+		int x = 0;
+		for(int i = 1; i<=10; i++){
+			x += i;
+		}
+		System.out.println("1부터 10까지의 합 : " + x);
 	}
 
 }

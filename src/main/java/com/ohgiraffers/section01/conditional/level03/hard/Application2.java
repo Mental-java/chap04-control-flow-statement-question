@@ -1,5 +1,7 @@
 package com.ohgiraffers.section01.conditional.level03.hard;
 
+import java.util.Scanner;
+
 public class Application2 {
 
 	public static void main(String[] args) {
@@ -20,7 +22,21 @@ public class Application2 {
 		 * -- 출력 예시 --
 		 * 바나나의 가격은 3000원 입니다.
 		 * */
-		
+		Scanner sc = new Scanner(System.in);
+		String [] arr = {"사과", "바나나", "복숭아", "키위"};
+		String [] price = {"1000원", "3000원", "2000원", "5000원"};
+		System.out.print("과일 이름을 입력하세요 : ");
+		String order = sc.nextLine();
+		int check = 0;
+		for(int i = 0; i<arr.length; i++){
+			if(arr[i].equals(order)){
+				System.out.printf("%s의 가격은 %s 입니다.", arr[i], price[i]);
+				check = 1;
+			}
+		}
+		if(check == 0){
+			System.out.println("준비된 상품이 없습니다.");
+		}
 	}
 
 }

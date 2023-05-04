@@ -1,5 +1,5 @@
 package com.ohgiraffers.section01.conditional.level01.basic;
-
+import java.util.*;
 public class Application1 {
 
 	public static void main(String[] args) {
@@ -13,7 +13,14 @@ public class Application1 {
 		 * -- 출력 예시 --
 		 * 양수다.
 		 * */
-
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수를 하나 입력하세요 : ");
+		int x = sc.nextInt();
+		if(x<0) {
+			System.out.println("양수가 아니다.");
+		}else{
+			System.out.println("양수다.");
+		}
 	}
 
 }
