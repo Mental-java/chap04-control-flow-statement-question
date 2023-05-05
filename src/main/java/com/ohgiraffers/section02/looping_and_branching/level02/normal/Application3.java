@@ -1,5 +1,7 @@
 package com.ohgiraffers.section02.looping_and_branching.level02.normal;
 
+import java.util.Scanner;
+
 public class Application3 {
 
 	public static void main(String[] args) {
@@ -12,7 +14,18 @@ public class Application3 {
 		 * -- 출력 예시 --
 		 * 수박수박수
 		 * */
-		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수를 입력하세요 : ");
+		int k = sc.nextInt();
+		for(int i=1; i<k+1; i++){
+			if(i%2==0){
+				System.out.print("박");
+			}else{
+				System.out.print("수");
+			}
+		}
+
+
 	}
 
 }
