@@ -29,7 +29,7 @@ public class Application2 {
 		Scanner sc = new Scanner(System.in);
 		int count = 0;
 		int check = 0;
-		int x = (int)(Math.random()*100);
+		int x = (int)(Math.random()*100)+1;
 		while(check==0){
 			System.out.print("정수를 입력하세요 : ");
 			int num = sc.nextInt();
